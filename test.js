@@ -260,22 +260,25 @@ while (n < 1) {
     if (isParent == false) {
       //if the subsidiary has no children in the list it is added as a children parameter to his parent and removed form the list
       theParent = subsidiaries.find(o => o.perimetre_juridique_raison_sociale == subsidiaries[i].societe_parente);
-      if (subsidiaries[i].children != null) {
+      let condition = [(subsidiaries[i].children != null), true];
+      switch (condition){
+      case [true, true]:
         console.log(subsidiaries[i]);
         theParent.children = {
           'name' : subsidiaries[i].perimetre_juridique_raison_sociale,
           'children' : subsidiaries[i].children
         }
-      } else {
+      case [false, true]:
           theParent.children = {
             'name' : subsidiaries[i].perimetre_juridique_raison_sociale,
             'children' : null
-        }
+        };
       };
-      subsidiaries.splice(i, 1);
     };
+    subsidiaries.splice(i, 1);
   };
 };
+
 
 console.log(subsidiaries);
 

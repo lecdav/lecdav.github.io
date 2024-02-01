@@ -17,5 +17,3 @@ async function fetchData() {
 
 fetchData();
 
-const tree = {};
-

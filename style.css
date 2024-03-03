@@ -4,5 +4,16 @@ body {
 
 #chartdiv {
   width: 100%;
-  height: 500px;
+  height: 3000px;
 }
+
+.highcharts-figure {
+  margin: 0 auto;
+  max-width: 900px;
+  min-width: 360px;
+}
+
+#container {
+  height: 1200px;
+}
+

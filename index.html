@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>EDF Subsidiary Company</title>
+    <title>EDF Group Organisation</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/treegraph.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   </head>
   <body>
-    <div id="chartdiv"></div>
+    <div id="chartdiv" hidden></div>
 
-    <script type="module" src="chart.js"></script>
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+      <p class="highcharts-description">
+        Source : <a href="https://opendata.edf.fr/explore/dataset/organigramme-du-groupe-edf/table/?disjunctive.spatial_perimeter&sort=-tri">https://opendata.edf.fr/explore/dataset/organigramme-du-groupe-edf/table/?disjunctive.spatial_perimeter&sort=-tri</a>
+     </p>
+  </figure>
+  
+
+    <script type="module" src="./js/chart/chart-amchart.js"></script>
+    <script type="module" src="./js/chart/chart-highcharts.js"></script>
   </body>
 </html>
